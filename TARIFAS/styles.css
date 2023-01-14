@@ -1,0 +1,419 @@
+@font-face {
+    font-family: "BebasNeue";
+    src: url(../BebasNeue.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "TrebuchetMS";
+    src: url(../TrebuchetMS.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Rubik";
+    src: url(../Rubik_Vinyl/RubikVinyl-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Bungee";
+    src: url(../Bungee_Inline/BungeeInline-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Aboreto";
+    src: url(../Aboreto/Aboreto-Regular.ttf);
+}
+@font-face{
+    font-family: "Comingsoon";
+    src: url(../Coming-Soon/ComingSoon-Regular.ttf)
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: black;
+}
+
+.clearfix{
+    float:none;
+    clear: both;
+}
+
+.wrap {
+    width: 1200px;
+    margin: 0px auto;
+    
+}
+
+/* CABEZERA*/
+
+#header {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    font-family: "BebasNeue";
+    color: white;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+#logo {
+    float:left;
+    width: 250px;
+    background-color:rgb(98, 56, 56);
+    text-align: center;
+    margin-top: 25px;
+    margin-left: 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 300ms;
+    color: black;
+    border-radius: 10px;
+}
+
+.material-symbols-outlined{
+    float: left;
+}
+
+#logo:hover{
+    border-radius: 10px;
+    color: black;
+    background-color: rgb(158, 64, 64);
+}
+
+#logo h3 {
+    display: block;
+    float: right;
+    font-size: 40px;
+    margin-top: 5px;
+    margin-right: 65px;
+    transition: all 300ms;
+
+}
+
+#logo h3 a{
+    text-decoration: none;
+    color: white;
+}
+
+#logo:hover h3{
+    animation: fromRight 300ms linear;
+}
+
+@keyframes fromRight{
+    from{
+        transform: translateX(200%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+#menu {
+    float: right;
+    height: 70px;
+    background: transparent;
+    margin-top: 15px;
+}
+
+#menu ul li {
+    font-size: /*2.3vw;*/ 30px;
+    display: inline-block;
+    margin: 0px 20px 0px 20px;
+    letter-spacing: 1px;
+    line-height: 70px;
+}
+
+#menu ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    transition: all 200ms;
+}
+
+#menu ul li a:hover {
+    color: rgb(87, 46, 46);
+    transform: scale(1.7, 1.7)
+}
+
+#menu ul li a:active {
+    color: rgb(87, 46, 46);
+    transform: scale(1.7, 1.7)
+}
+
+#menu ul li a:focus {
+    color: rgb(87, 46, 46);
+    transform: scale(1.7, 1.7)
+}
+
+#logo .material-symbols-outlined {
+    display: block;
+    float: left;
+    font-size: 30px;
+    margin-top: 8px;
+    margin-left: 26px;
+    animation-name: rotate-gear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate-gear{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform:rotateZ(360deg);
+    }
+}
+
+#logo:hover .material-symbols-outlined{
+    animation: fromBellow 500ms linear;
+}
+
+@keyframes fromBellow{
+    0%{
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(200%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+/* CONTINGUT */
+
+#foto{
+    width: 100%;
+    height: 500px;
+    background-image: url(../fotosMarc/foto\ equip.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: "Rubik";
+    font-size: 3vw;
+    text-align: center;
+    margin-top: 150px;
+    color: white;
+}
+
+#foto p{
+    margin-top: 50px;
+}
+
+#section{
+    margin-top: 100px;
+    width: 100%;
+    height: 800px;
+    color: white;
+}
+
+#article{
+    display: flex;
+    flex-direction: column;
+}
+
+#article h1{
+    font-family: "Rubik";
+    font-size: 3vw;
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    
+}
+
+#article h3{
+    font-family: "Aboreto" ;
+    font-size: 2.1vw ;
+    text-align: center;
+    padding: 20px;
+}
+
+#section #cajas{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+
+#section #cajas .tarifas{
+    background-color: rgb(91, 36, 36);
+    width: 25vw;
+    height: 20vw;
+    padding: 30px;
+    text-align: center;
+    text-align: justify;
+    border-radius: 20px;
+    border: 1px solid white;
+    margin: 50px;
+    box-shadow: 5px 5px 10px 0px grey;
+    justify-content: space-around;
+    
+}
+
+
+#section #cajas .tarifas .titulo{
+    text-align: center;
+    font-size: 1.5vw;
+    padding: 0.5vw;
+}
+
+#section #cajas .tarifas p{
+    margin-top: 10px;
+    font-family: "TrebuchetMS";
+    text-align: center;
+    padding: 0.3vw;
+    font-size: 1.2vw;
+}
+
+#section #banner h3{
+    font-family: "Aboreto" ;
+    font-size: 2.1vw ;
+    text-align: center;
+    padding: 20px;
+}
+
+
+#section #banner #button{
+    display: block;
+    width: 12vw;
+    height: 7vw;
+    border: 3px solid rgb(91, 36, 36);
+    padding: 10px;
+    margin: 0px auto;
+    font-family:"TrebuchetMS" ;
+    cursor: pointer;
+    font-size: 1.5vw;
+    border-radius: 50px;
+}
+
+#section #banner #button a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+/* FOOTER */
+
+#footer{
+    width: 100%;
+    height: 470px;
+    background: black;
+    color: white;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+#footer .wrap > div{
+    float: left;
+    width: 320px;
+    height: 370px;
+    margin: 40px;
+    text-align: center;
+    color: white;
+    font-family: "TrebuchetMS";
+}
+
+footer a{
+    text-decoration: none;
+    color:#37bcf9;
+    transition: all 300ms;
+}
+
+#footer h5{
+    display: block;
+    background: url(recursos/img/pxgray.png), rgb(87, 46, 46);
+    height: 50px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: "BebasNeue";
+    font-size: 40px;
+    line-height:55px;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+
+#footer ul{
+    text-align: left;
+    margin: 20px;
+    font-size: 25px;
+}
+
+#footer ul li{
+    margin-top: 10px;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+#footer ul li a{
+    display: block;
+    height: 40px;
+    transition: all 300ms;
+}
+
+#footer ul li:hover a{
+    padding-left:40px;
+    color:white;
+    width: 100%;
+}
+
+#footer iframe{
+    width: 100%;
+    height: 300px;
+    margin-top:10px;
+    border-radius: 5px;
+    border: 5px solid white ;
+    box-shadow: 0px 0px 5px gray;
+}
+
+#footer img{
+    margin-bottom: 15px;
+}
+
+#footer #browsers img{
+    width: 45px;
+}
+
+#info img{
+    width: 150px;
+}
+
+
+/* MEDIA QUERYS*/
+
+@media(max-width:1290px){
+    #section #cajas .tarifas{
+        height: 20vw;
+    }
+
+}
+
+@media(max-width:1169px){
+    #section #cajas .tarifas{
+        width: 60vw;
+        height: 20vw;
+        margin: 50px;
+
+    }
+
+}
+
+
